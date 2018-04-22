@@ -6,7 +6,7 @@ const studentController = require('../controllers/student.controller');
 
 router.post('/register', studentController.register);
 
-router.post('login', function(req, res, next){
+router.post('/login', function(req, res, next){
     passport.authenticate('local', {session:false}, (err, student, info)=> {
         if(err||!student){
             return res.status(400).json({

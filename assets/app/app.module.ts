@@ -20,7 +20,7 @@ import { StudentHomeService } from './components/student/student.home.service';
         AppComponent,
         StudentHomeComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
         HeaderComponent
 
     ],

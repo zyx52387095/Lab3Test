@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
 
     onSubmit(){
         const student = new Student(
-            this.myForm.value.sutdentid,
+            this.myForm.value.studentid,
             this.myForm.value.password,
             this.myForm.value.firstname,
             this.myForm.value.lastname,

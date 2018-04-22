@@ -1,4 +1,4 @@
-<h2>Hello {{fullname}} </h2>
+<h2>Hello {{studentid}} </h2>
 <hr>
 <style>
     [class="col-md-3"] {
@@ -30,12 +30,12 @@
                     <h4>ISBN</h4>
                 </div>
             </div>
-            <div *ngFor="let book of _books">
+            <div *ngFor="let course of _courses">
                 <div class="row">
-                    <div class="col-md-3">{{ book.title }}</div>
-                    <div class="col-md-6">{{ book.author }}</div>
-                    <div class="col-md-3">{{ book.isbn }}
-                        <button (click)="onRemove(book.isbn)">Remove</button>
+                    <div class="col-md-3">{{ course.coursename }}</div>
+                    <div class="col-md-6">{{ course.section }}</div>
+                    <div class="col-md-3">{{ course.semester }}
+                        <button (click)="onRemove(course.coursecode)">Remove</button>
                     </div>
                 </div>
             </div>
@@ -61,12 +61,12 @@
                     <h4>ISBN</h4>
                 </div>
             </div>
-            <div *ngFor="let book of _availablebooks">
+            <div *ngFor="let course of _availablecourses">
                 <div class="row">
-                    <div class="col-md-3">{{ book.title }}</div>
-                    <div class="col-md-6">{{ book.author }}</div>
-                    <div class="col-md-3">{{ book.isbn }}
-                        <button (click)="onAdd(book.isbn)">Add</button>
+                    <div class="col-md-3">{{ course.coursename }}</div>
+                    <div class="col-md-6">{{ course.section }}</div>
+                    <div class="col-md-3">{{ course.semester }}
+                        <button (click)="onAdd(course.coursecode)">Add</button>
                     </div>
                 </div>
             </div>

@@ -29,15 +29,15 @@ export class LoginComponent {
         this.authService.login(student)
             .subscribe(
                 data => {
-                    // localStorage.setItem("token", data.token);
-                    // localStorage.setItem('studentid', data.student.studentid);
-                    // localStorage.setItem('email', data.student.email);
-                    // localStorage.setItem('firstname', data.student.firstname);
-                    // localStorage.setItem('lastname', data.student.lastname);
-                    // localStorage.setItem('address', data.student.address);
-                    // localStorage.setItem('city', data.student.city);
-                    // localStorage.setItem('program', data.student.program); 
-                    // localStorage.setItem("student",JSON.stringify(data.student));
+                    localStorage.setItem("token", data.token);
+                    //localStorage.setItem('studentid', data.student.studentid);
+                    localStorage.setItem('email', data.student.email);
+                    localStorage.setItem('firstname', data.student.firstname);
+                    localStorage.setItem('lastname', data.student.lastname);
+                    localStorage.setItem('address', data.student.address);
+                    localStorage.setItem('city', data.student.city);
+                    localStorage.setItem('program', data.student.program); 
+                    localStorage.setItem("student",JSON.stringify(data.student));
                     this.router.navigateByUrl('/home');
                 },
                 error => console.error(error)
