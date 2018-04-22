@@ -42,6 +42,21 @@ export class AuthService{
     token(){
         return localStorage.getItem('token');
     }
+    email(){
+        return localStorage.getItem('email');
+    }
+    firstname(){
+        return localStorage.getItem('firstname');
+    }
+    lastname(){
+        return localStorage.getItem('lastname');
+    }
+    address(){
+        return localStorage.getItem('address');
+    }
+    city(){
+        return localStorage.getItem('city');
+    }
     program(){
         return localStorage.getItem('program');
     }

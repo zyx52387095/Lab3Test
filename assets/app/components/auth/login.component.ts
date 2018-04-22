@@ -30,7 +30,7 @@ export class LoginComponent {
             .subscribe(
                 data => {
                     localStorage.setItem("token", data.token);
-                    //localStorage.setItem('studentid', data.student.studentid);
+                    localStorage.setItem('studentid', data.student.studentid);
                     localStorage.setItem('email', data.student.email);
                     localStorage.setItem('firstname', data.student.firstname);
                     localStorage.setItem('lastname', data.student.lastname);
