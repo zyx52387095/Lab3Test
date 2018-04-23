@@ -7,7 +7,7 @@ const insert = function(req, res){
 }
 
 const find = function(req,res) {
-    courseModel.find(studentid, function(err, retobj){
+    courseModel.find(req.params.studentid, function(err, retobj){
         sendResp(err, res,"Course found", retobj);
     });
 }
@@ -24,7 +24,7 @@ const update = function(req, res){
     });
 }
 
-function rendResp(err, res, message, retobj){
+function sendResp(err, res, message, retobj){
     const ret = {};
     if(err){
         ret.message = err.message;

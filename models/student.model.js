@@ -56,6 +56,14 @@ studentschema.statics.checkPassword = function(password, cbfn) {
     }
 }
 
+studentschema.methods.verifyPassword = function(password) {
+    if (this.password ==doHash(password)){
+        return true;
+    } else{
+        return false;
+    }
+};
+
 function doHash(val){
     return crypto.pbkdf2Sync(val, salt, 10000, 64, 'sha512').toString('base64');
 }

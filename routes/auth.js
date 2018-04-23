@@ -10,7 +10,8 @@ router.post('/login', function(req, res, next){
     passport.authenticate('local', {session:false}, (err, student, info)=> {
         if(err||!student){
             return res.status(400).json({
-                message: 'No user',
+                // message: 'No user',
+                message: info,
                 student : student
             });
         }
