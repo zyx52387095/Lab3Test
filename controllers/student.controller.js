@@ -9,10 +9,10 @@ const register = function(req, res){
         password: req.body.password,
         firstname: req.body.firstname,
         lastname: req.body.lastname,
+        email:req.body.email,
         address: req.body.address,
         city: req.body.city,
-        phonenumber: req.body.phonenumber,
-        email:req.body.email,
+        //phonenumber: req.body.phonenumber,
         program: req.body.program
     });
 

@@ -22,22 +22,22 @@ const studentschema = new schema({
     lastname:{
         type: String
     },
+    email:{
+        type: String,
+        required: true,
+    },
     address:{
         type: String
     },
     city:{
         type: String
     },
-    email:{
-        type: String,
-        required: true,
-    },
     program:{
         type: String
-    },
-    provider: String,
-    providerId: String,
-    providerData: {}
+    }
+    // provider: String,
+    // providerId: String,
+    // providerData: {}
 });
 
 studentschema.statics.register = function(student, cbfn) {
